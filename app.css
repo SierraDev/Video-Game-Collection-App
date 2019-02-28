@@ -1,0 +1,85 @@
+.success, .error {
+    color: white;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+}
+
+.success{
+    background:#42f47d;
+}
+
+.error{
+    background:#f44d41;
+}
+
+body{
+    animation: scanlines 10s linear infinite;
+    animation: glow 1s ease-in infinite;
+    font-family: 'Press Start 2P', monospace;
+    color: white;
+    background: linear-gradient(
+    to bottom,
+    rgba(0, 9, 0, 1),
+    rgba(0, 5, 0, 1) 50%,
+    rgba(0, 5, 0, 1) 70%,
+    rgba(0,0,0,0.6)
+  );
+  background-size: 100% 0.3rem;
+  border-radius: 2rem;
+}
+
+@keyframes scanlines{
+    0%, 100% {bottom: 0}
+    10% {bottom: 100px}
+ }
+ 
+ @keyframes glow {
+  from {
+    text-shadow: 0px 0px 20px rgba(255,255,255,0.55);
+  }
+  to {
+    text-shadow: 0px 0px 20px rgba(255,255,255,0.65);;
+  }
+}
+
+body:after {
+  animation: grain 8s steps(10) infinite;
+  background-image: url("noise.png");
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.3;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+  z-index: -999;
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
+}
+
+input, select, textarea {
+    color: black;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 20px;
+    outline: none;
+}
+
+#submit-button{
+    color: #e0dede;
+}
+
+#submit-button:hover {
+    color: #ffffff;
+}
+
