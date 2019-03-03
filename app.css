@@ -13,7 +13,6 @@
 }
 
 body{
-    padding-top: 100px;
     animation: scanlines 10s linear infinite;
     animation: glow 1s ease-in infinite;
     font-family: 'Press Start 2P', monospace;
@@ -69,6 +68,7 @@ body:after {
   90% { transform:translate(-10%, 10%) }
 }
 
+
 input, select, textarea {
     color: black;
     font-family: 'Press Start 2P', monospace;
@@ -76,11 +76,13 @@ input, select, textarea {
     outline: none;
 }
 
-#submit-button{
+#submit-button, #alphabetize-button{
     color: #e0dede;
+    animation: glow 1s ease-in infinite;
 }
 
-#submit-button:hover {
+#submit-button, #alphabetize-button:hover {
     color: #ffffff;
+    animation: glow 1s ease-in infinite;
 }
 
