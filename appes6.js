@@ -7,7 +7,7 @@ class VideoGame {
 }
 class UI {
     addVideoGameToList(videoGame){
-        const list = document.getElementById('video-game-list');
+    const list = document.getElementById('video-game-list');
     //create tr element
     const row = document.createElement('tr');
     //insert cols
