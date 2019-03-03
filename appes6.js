@@ -121,11 +121,11 @@ function(e){
           const ui = new UI();
           
           //validate
-          if(title === '' || developer === '' || year === ''){
+          if(title === '' && developer === '' && year === ''){
             // error alert
-            ui.showAlert('Please enter something.', 'error')
+            ui.showAlert('Please enter something.', 'error');
           } else {
-         //add video game to list
+            //add video game to list
             ui.addVideoGameToList(videoGame);
             //add to local storage
             Store.addVideoGame(videoGame);
@@ -137,7 +137,7 @@ function(e){
             ui.clearFields();
           }
           
-    
+          
     e.preventDefault();
 });
 
@@ -158,4 +158,26 @@ document.getElementById('video-game-list').addEventListener
     ui.showAlert('Game removed', 'success');
     e.preventDefault();
 });
+
+
+    //alphabetize event listener
+    document.getElementById("alphabetize-button").addEventListener
+('click', function(e){
+    const ui = new UI();
+    let parent = document.getElementById("video-game-list"),
+    itemsArray = Array.prototype.slice.call(parent.children);
+    itemsArray.sort(function (a, b) {
+    if (a.innerText < b.innerText) return -1;
+    if (a.innerText > b.innerText) return 1;
+    return 0;
+});
+
+    itemsArray.forEach(function (item) {
+    parent.appendChild(item);
+});
+    ui.showAlert('Bam! Alphabetized!', 'success');
+    e.preventDefault();
+});
+
+
 
