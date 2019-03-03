@@ -5,8 +5,6 @@ class VideoGame {
         this.year = year;
     }
 }
-
-
 class UI {
     addVideoGameToList(videoGame){
         const list = document.getElementById('video-game-list');
@@ -136,9 +134,7 @@ function(e){
           //clear fields
             ui.clearFields();
           }
-          
-          
-    e.preventDefault();
+          e.preventDefault();
 });
 
 //event listener for delete
