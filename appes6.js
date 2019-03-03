@@ -157,7 +157,7 @@ document.getElementById('video-game-list').addEventListener
 
 
     //alphabetize event listener
-    document.getElementById("alphabetize-button").addEventListener
+document.getElementById("alphabetize-button").addEventListener
 ('click', function(e){
     const ui = new UI();
     let parent = document.getElementById("video-game-list"),
