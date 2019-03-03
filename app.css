@@ -13,6 +13,7 @@
 }
 
 body{
+    padding-top: 100px;
     animation: scanlines 10s linear infinite;
     animation: glow 1s ease-in infinite;
     font-family: 'Press Start 2P', monospace;
