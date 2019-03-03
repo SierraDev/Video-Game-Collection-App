@@ -84,6 +84,5 @@ input, select, textarea {
 
 #submit-button, #alphabetize-button:hover {
     color: #ffffff;
-    animation: glow 1s ease-in infinite;
 }
 
